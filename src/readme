@@ -1,0 +1,14 @@
+1. use the following to compile anirec
+
+   f77 -o ../bin/anirec -O anirec.f lib/*.o
+   
+   anirec.spike.f is same as anirec.f but doesn't convolve source wavelet
+
+2. examples are in ../data
+   
+  
+3. Park's original code is here:
+
+http://earth.geology.yale.edu/~jjpark/Code/anirec.tar
+
+ 

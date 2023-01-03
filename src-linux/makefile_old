@@ -1,0 +1,42 @@
+# Makefile for raysum inversion using neighbourhood algorithm.
+# Using Sun compilers:
+FPP = fpp
+F77 = f77 -m32
+LD = f77 -m32
+CC = gcc -m32
+
+OBJ=  eispack.o refft.o SACREAD.o
+
+
+default: anirec anirec.spike
+
+clean:
+	\rm *.o 
+
+
+anirec: $(OBJ) anirec.o
+	$(F77) -o anirec -O2 $(OBJ) anirec.o
+	mv anirec ../bin/
+
+anirec.spike: $(OBJ) anirec.spike.o
+	$(F77) -o anirec.spike -O2 $(OBJ) anirec.spike.o
+	mv anirec.spike ../bin/
+
+
+
+anirec.o: anirec.f
+	$(F77) -c -O2 anirec.f
+
+anirec.spike.o: anirec.spike.f
+	$(F77) -c -O2 anirec.spike.f
+
+eispack.o: lib/eispack.f
+	$(F77) -c -O2 lib/eispack.f
+
+refft.o: lib/refft.c
+	$(CC) -c -O2 lib/refft.c
+
+SACREAD.o: lib/SACREAD.f
+	$(F77) -c -O2 lib/SACREAD.f
+
+	
