@@ -1,0 +1,14 @@
+Anirec_rec matlab
+
+This is a compliation of the reflectivty code from Jeff Park that can be called in MATLAB. Nothing is written to the disk to interface with Fortran this way, and so the code is pretty fast.
+
+If you use this, the citations are
+Levin, V., & Park, J. (1997). P-SH conversions in a flat-layered medium with anisotropy of arbitrary orientation. Geophysical Journal International, 131(2), 253–266. https://doi.org/10.1111/j.1365-246X.1997.tb01220.x
+
+Park, J. (1996). Surface waves in layered anisotropic structures. Geophysical Journal International, 126(1), 173–183. https://doi.org/10.1111/j.1365-246X.1996.tb05276.x
+
+Synthetic_Sp.m is an example of how to use this. If you have further questions about the algorithm, they are probably answered in the 1997 paper. If you have questions about the compliation, feel free to email me at joseph.byrnes@nau.edu or byrnes.joseph@gmail.com
+
+Not compiled for windows - I tried, and I have no idea how to that. 
+
+One usage note. Each call prints "returnvalue: 0.00000" to the command window. This is an error flag I used when making it, and 0 indicates no errors. If you want to remove the output, recompile with the print line commented out or run anriec.m wrapped in evalc. 
