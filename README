@@ -1,6 +1,6 @@
 Anirec_rec matlab
 
-This is a compliation of the reflectivty code from Jeff Park that can be called in MATLAB. Nothing is written to the disk to interface with Fortran this way, and so the code is pretty fast.
+This is a compliation of the reflectivty code from Jeff Park/Vadim Levin that can be called in MATLAB. Nothing is written to the disk to interface with Fortran this way, and so the code is pretty fast.
 
 If you use this, the citations are
 Levin, V., & Park, J. (1997). P-SH conversions in a flat-layered medium with anisotropy of arbitrary orientation. Geophysical Journal International, 131(2), 253–266. https://doi.org/10.1111/j.1365-246X.1997.tb01220.x
